@@ -3,6 +3,7 @@ import { FaLine } from "react-icons/fa";
 import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Contact from "./Footer"
+import AboutSection from "./About";
 
 export default function OnePageSite() {
     const [showHero, setShowHero] = useState(false);
@@ -11,7 +12,7 @@ export default function OnePageSite() {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => setShowHero(entry.isIntersecting),
-            { threshold: 0.3 }
+            { threshold: 0.4 }
         );
 
         if (heroRef.current) observer.observe(heroRef.current);
@@ -48,7 +49,7 @@ export default function OnePageSite() {
                                 ใช้งานง่าย ปลอดภัย พร้อมบริการติดตั้งฟรีในเขตกรุงเทพและปริมณฑล
                             </p>
                             <a
-                                href="https://line.me/R/ti/p/@linejazz"
+                                href="https://line.me/R/ti/p/linejazz"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white text-base sm:text-lg px-6 py-3 rounded-full transition"
@@ -70,7 +71,7 @@ export default function OnePageSite() {
 
             {/* About Section */}
             <section id="about" className="p-8 bg-gray-100">
-                <h2 className="text-3xl font-semibold mb-6 text-center">เกี่ยวกับ</h2>
+                <AboutSection/>
                 {/* เนื้อหา about */}
             </section>
 
