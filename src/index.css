@@ -1,0 +1,22 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -- Variable Theme -- */
+@layer base {
+  :root {
+    /* light theme vars */
+  }
+  .dark {
+    /* dark theme vars */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
